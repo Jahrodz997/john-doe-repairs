@@ -1,0 +1,474 @@
+/* 
+---- 01 Typography System ----
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT WEIGHTS: 
+- Default: 400 
+- Medium 500
+- Semi bold 600 
+- Bold 700
+
+LINE HEIGHTS: 
+- Default: 1 
+- Small 1.05
+- Paragraph 1.6
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+----- 02 Color -----
+- Primary: #e03131
+- Tiints: #b32727
+- Shades: #fceaea #f6c1c1 #f9d6d6
+- Accents: 
+- Greys: #212529 #343a40 #dee2e6 #888
+
+----- 03 Image source ----- 
+- unsplash.com
+- UI faces for customer faces 
+- pexels
+
+----- 04 Shadows ----
+
+---- 05 Border radius ----
+- Default border radius 
+
+---- 06 White Space ----
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #343a40;
+}
+/* *********** REUSABLE CLASSES ********** */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+/* ====== HEADER SECTION ====== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fceaea;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  height: 8.6rem;
+}
+/* STYLING NAV LINKS */
+.nav-link-list {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  list-style: none;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: #343a40;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  background-color: #e03131;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 300ms;
+}
+.nav-link:hover,
+.nav-link.nav-link:active {
+  background-color: #b32727;
+  color: #fff;
+}
+/* ======= HERO SECTION ======= */
+.section-hero {
+  background-color: #fceaea;
+  padding: 6.4rem 0 8rem 0;
+}
+.hero-grid {
+  display: grid;
+  margin: 0 auto;
+  max-width: 130rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8rem;
+}
+.hero-img {
+  width: 100%;
+  border-radius: 15px;
+}
+.hero-headline {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: #343a40;
+  margin-bottom: 3.2rem;
+}
+
+.hero-paragraph {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 3.2rem;
+}
+/* STYLING BUTTONS */
+.btn--form,
+.btn-cta:link,
+.btn-cta:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fff;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: all 300ms;
+}
+.btn--main:link,
+.btn--main:visited {
+  background-color: #e03131;
+}
+.btn--main:hover,
+.btn--main:active {
+  background-color: #b32727;
+}
+.btn--sec:link,
+.btn--sec:visited {
+  background-color: #343a40;
+}
+.btn--sec:hover,
+.btn--sec:active {
+  background-color: #212529;
+}
+.margin-right-btn {
+  margin-right: 2.4rem;
+}
+/* ======= STYLING CUSTOMER IMAGES ======= */
+.customer-faces {
+  display: flex;
+  align-items: center;
+  margin-top: 6.4rem;
+  gap: 1.6rem;
+}
+.customer-faces-imgs {
+  display: flex;
+}
+.customer-faces-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fceaea;
+}
+.customer-faces-imgs img:last-child {
+  margin-right: 0;
+}
+.service-rating {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.service-rating span {
+  color: #e03131;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+}
+/* ======== PARTNERS SECTOIN ====== */
+.section-partners {
+  padding: 4.8rem;
+}
+.partners-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  color: #888;
+}
+.partners-img-box {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4.8rem;
+}
+.partners-img-box img {
+  height: 4.4rem;
+  filter: grayscale(100%);
+}
+/* ========== THE HOW TO SECTION ======== */
+.section-how-to {
+  padding: 0 0 8rem 0;
+}
+.heading-tert {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  color: #e03131;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+.how-it-works-img-box::before {
+  content: "";
+  display: block;
+  width: 70%;
+  padding-bottom: 70%;
+  background-color: #fceaea;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  border-radius: 8px;
+}
+.how-it-works-img-box::after {
+  content: "";
+  display: block;
+  width: 65%;
+  padding-bottom: 65%;
+  background-color: #f6c1c1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 8px;
+}
+.how-it-works-img-box {
+  width: 100%;
+  position: relative;
+}
+.how-it-works-img-box img {
+  width: 80%;
+  height: 60%;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.how-it-works-box {
+  justify-self: center;
+}
+.number {
+  font-size: 6.2rem;
+  font-weight: 700;
+  color: #fceaea;
+  margin-bottom: 8px;
+}
+.how-to-description {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.sub-heading {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+/* ======== CUSTOMER TESTIMONIAL SECTION ======== */
+/* ****** CARD STYLE LAYOUT ****** */
+.customer-testimonials {
+  margin: 8rem;
+  text-align: center;
+}
+.customer-test-heading {
+  margin-bottom: 4.8rem;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  background-color: #e03131;
+  padding: 1.2rem 4.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  transition: all 400ms;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.4);
+}
+.card-img {
+  width: 9.8rem;
+  height: 9.8rem;
+  transform: scale(1.5);
+  border-radius: 8px;
+}
+.testimonial {
+  color: #fceaea;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* =============== */
+/* ======== CTA SECTION ======== */
+/* ************ */
+.section-cta {
+  background-color: #fceaea;
+  padding: 6.4rem 0 8rem 0;
+}
+.grid-cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* tmep height */
+  height: 50rem;
+  /* to give the cta section a background gradient you use background image and linear gradient  */
+  background-image: linear-gradient(to right bottom, #e03131, #f6c1c1);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  /* to prevent the picture corners from overflowing the grid cta you use overflow hidden  */
+  overflow: hidden;
+}
+
+/* cta image styling and layout */
+.cta-img-box {
+  background-image: url(images/cta-section-img.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 5rem 3rem 5rem;
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+}
+.form-cta {
+  color: #212529;
+  padding: 0 5rem 3rem 5rem;
+}
+.form-cta h3 {
+  padding: 3rem 0rem 2rem 3rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  padding: 0 5rem 3rem 5rem;
+  line-height: 1.6;
+}
+/* styling the label, input amd select elements */
+.form-grid label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 9px;
+  background-color: #fceaea;
+  color: inherit;
+}
+.btn--form {
+  background-color: #701919;
+  border: none;
+  align-self: end;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #701919;
+}
+/* *************** */
+/* ======== FOOTER SECTION ======== */
+/* ******  ****** */
+.section-footer {
+  padding: 12.8rem 0 12.8rem 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3.2rem;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 5.2rem;
+}
+.social-icon {
+  height: 3rem;
+  width: 3rem;
+}
+/* this will move the copyright all the way to the bottom you have to make the logo-col flex box and change the direction of the flex container */
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* to give the logo margin bottom you need to change it from an inline element to a block element */
+/* a link <a> is an inline element by default */
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+/* styling the footer-links */
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 300ms;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+/* styling the footer column headings */
+.footer-col-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4rem;
+}
+.address-col {
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.hours-list {
+  list-style: none;
+  color: #555;
+}
+/* styling the nav cols */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
