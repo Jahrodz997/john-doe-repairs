@@ -1,0 +1,118 @@
+/* 
+---- 01 Typography System ----
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT WEIGHTS: 
+- Default: 400 
+- Medium 500
+- Semi bold 600 
+- Bold 700
+
+LINE HEIGHTS: 
+- Default: 1 
+- Small 1.05
+- Paragraph 1.6
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+----- 02 Color -----
+- Primary: #e03131
+- Tiints: #b32727
+- Shades: #fceaea #f6c1c1 #f9d6d6
+- Accents: 
+- Greys: #212529 #343a40 #dee2e6 #888
+
+----- 03 Image source ----- 
+- unsplash.com
+- UI faces for customer faces 
+- pexels
+
+----- 04 Shadows ----
+
+---- 05 Border radius ----
+- Default border radius 
+
+---- 06 White Space ----
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* screen size of 1350px website looks good */
+/* Website looks good on any screen size bigger than 1350px */
+
+/* 1300px hero section needs more padding */
+/* 1300/16 = 81em */
+@media (max-width: 81em) {
+  .section-hero {
+    padding: 6.4rem 3rem 8rem 3rem;
+  }
+}
+
+/* 1250px CTA section needs padding on sides */
+/* 1250/16 = 78em */
+@media (max-width: 78em) {
+  .section-cta {
+    padding: 6.4rem 3rem 8rem 3rem;
+  }
+  .section-how-to {
+    padding: 0 3rem 8rem 3rem;
+  }
+  .section-footer {
+    padding: 12.8rem 3rem 12.8rem 3rem;
+  }
+  .nav-link-list {
+    gap: 6rem;
+  }
+  .customer-testimonials {
+    margin: 8rem 3rem;
+  }
+  .customer-card {
+    align-items: stretch;
+    gap: 4.8rem;
+  }
+  .card {
+    gap: 3.2rem;
+    padding: 2.4rem 3.2rem;
+  }
+  .card-img {
+    transform: none;
+    flex-shrink: 0;
+  }
+}
+/* At 1130px the heading in the hero section jumps to 4 lines */
+/* it needs to be at 3 lines */
+/* 1130/16 =70em */
+@media (max-width: 71em) {
+  .hero-headline {
+    font-size: 3.6rem;
+  }
+}
+/* AT 1100PX I want to decreae the font size globallly */
+/* set font size to 9px so it would be 9/16 =56.25% */
+@media (max-width: 69em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+/* At 950px lets stack testimonial cards in 1 column */
+/* 950/16 =59em */
+@media (max-width: 59em) {
+  .customer-card {
+    grid-template-columns: 1fr;
+  }
+  .nav-link-list {
+    gap: 4rem;
+  }
+  .cta-text {
+    padding: 0 2rem 3rem 2rem;
+  }
+  .form-grid {
+    padding: 0 2rem 3rem 2rem;
+  }
+}
+/* up to 900px is looking good */
+/* anyhting below 900px nav section needs to be pit into a drop down box */
+/* an futher adjustments need to be made */
